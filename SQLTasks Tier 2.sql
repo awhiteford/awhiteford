@@ -111,7 +111,7 @@ FROM Members AS m
 WHERE m.memid != 0 AND (f.membercost * b.slots) > 30 AND date(b.starttime) = '2012-09-14'
 ORDER BY total_guest DESC
 
-/* Q9: This time, produce the same result as in Q8, but using a subquery. *
+/* Q9: This time, produce the same result as in Q8, but using a subquery. */
 SELECT subquery.name, subquery.member_name, subquery.total_guest
 FROM (
 	SELECT f.name, CONCAT(m.firstname, ' ', m.surname) AS member_name
